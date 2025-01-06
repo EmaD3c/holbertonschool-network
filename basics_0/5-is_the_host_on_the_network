@@ -1,12 +1,9 @@
 #!/usr/bin/env bash
-
 # si aucune adress ip est passer affiche le message et quitte le script
 if [[ $# -eq 0 ]]; then
     echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
     exit 0
 else
-
 # ping ladresse ip 5 fois
 ping -c 5 "$1"
-
 fi
