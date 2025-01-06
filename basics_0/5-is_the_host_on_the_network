@@ -1,7 +1,12 @@
 #!/usr/bin/env bash
 
 # si aucune adress ip est passer affiche le message et quitte le script
-[ "$#" -eq 1 ] || { echo "Usage: $0 {IP_ADDRESS}"; exit 0; }
+if [ "$#" -ne 1 ]; then
+    echo "Usage: $0 {IP_ADDRESS}"
+    exit 0
+else
 
 # ping ladresse ip 5 fois
 ping -c 5 "$1"
+
+fi
