@@ -1,0 +1,66 @@
+# What Happens When You Type https://www.google.com in Your Browser and Press Enter?
+
+Ever wondered what happens behind the scenes when you press "Enter" after typing a URL in your browser? Here’s a simple explanation of the process, step by step:
+
+---
+
+## 1. **DNS Request**
+When you type `https://www.google.com`, your browser needs to find the IP address of the server hosting Google’s website. 
+- The browser checks its cache, your device cache, and then queries a DNS server to resolve the domain name into an IP address.
+
+---
+
+## 2. **TCP/IP Connection**
+Once the IP address is found, your browser establishes a connection with the server using the **Transmission Control Protocol (TCP)**. This happens in three steps:
+1. **SYN:** Your device sends a connection request to the server.
+2. **SYN-ACK:** The server acknowledges the request.
+3. **ACK:** Your device confirms the connection.
+
+This is called the **TCP 3-way handshake**, and it ensures reliable data transfer.
+
+---
+
+## 3. **Firewall**
+The request passes through firewalls (on your device or the network) that check if it’s safe and allowed. Firewalls protect systems by filtering out malicious or unauthorized traffic.
+
+---
+
+## 4. **HTTPS/SSL**
+Since you entered a secure URL (`https`), your browser initiates an **SSL/TLS handshake** to encrypt the data exchanged with the server. 
+- The server provides an SSL certificate, proving its identity and enabling encryption.
+- This ensures that sensitive information (e.g., passwords) remains secure.
+
+---
+
+## 5. **Load Balancer**
+The request reaches Google’s **load balancer**, which distributes traffic across multiple servers. 
+- It ensures that no single server is overloaded and improves performance and reliability.
+
+---
+
+## 6. **Web Server**
+The load balancer forwards the request to a **web server**. The web server handles static content (e.g., images, HTML, CSS) and forwards requests for dynamic content to an application server.
+
+---
+
+## 7. **Application Server**
+The application server processes requests that require business logic. For example:
+- Searching for a keyword
+- Retrieving personalized content
+
+The application server communicates with the database to fetch or store information.
+
+---
+
+## 8. **Database**
+If needed, the application server queries a **database** to retrieve information (e.g., search results, user data). 
+- Databases are optimized for storing and managing large amounts of data efficiently.
+
+---
+
+## 9. **Response to Browser**
+The application server sends the processed data back to the web server, which then forwards it to your browser via the load balancer. The browser renders the webpage, and you can now see and interact with **Google**!
+
+---
+
+This entire process happens in milliseconds, making the web feel instant and seamless.
