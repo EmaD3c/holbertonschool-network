@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-# Option -p shows process PID/name and option -l shows only listen sockets.
-netstat -pl

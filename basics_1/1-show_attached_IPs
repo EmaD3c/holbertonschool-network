@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-# netsat affiche les info resaux et grep extrait les adresse ipv4
-netstat -ie | grep -oP '(?<=inet\s)\d+(\.\d+){3}'

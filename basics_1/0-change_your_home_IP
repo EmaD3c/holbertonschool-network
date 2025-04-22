@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-# modifier l'adress facebook et localhost
-#Save dans host backup
-cp /etc/hosts /etc/hosts.backup
-# clear ce quil y a dans host
-echo -n > /etc/hosts
-echo "127.0.0.2 localhost" >> /etc/hosts
-echo "8.8.8.8 facebook.com" >> /etc/hosts
