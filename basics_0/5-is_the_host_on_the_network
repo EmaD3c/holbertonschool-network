@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# verifie si un argument a ete donner
+if [ $# -eq 0 ]; then
+    echo "Usage: $0 {IP_ADDRESS}"
+    exit 1
+fi
+
+# recuper l'adresse
+IP_ADDRESS=$1
+
+# 5 pings vers l'adresse IP
+ping -c 5 $IP_ADDRESS
