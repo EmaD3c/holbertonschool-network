@@ -1,11 +1,14 @@
 #!/usr/bin/env bash
 # Bash script that pings an IP address
+
 # verifie si un argument a ete donner
 if [ $# -eq 0 ]; then
     echo "Usage: $0 {IP_ADDRESS}"
     exit 1
 fi
+
 # recuper l'adresse
-IP_ADDRESS=$1
+IP_ADDRESS="$1"
+
 # 5 pings vers l'adresse IP
-ping -c 5 $IP_ADDRESS
+ping -c 5 "$IP_ADDRESS"
