@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# Bash script that pings an IP address
 
 # verifie si un argument a ete donner
 if [ $# -eq 0 ]; then
