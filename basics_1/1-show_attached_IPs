@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# comment
+
+ifconfig | grep 'inet addr:' | awk {'print $2'}
